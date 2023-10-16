@@ -81,3 +81,27 @@
   display: block;
   width: 80%; /* Set the width when active */
 }
+
+.nav-link {
+  position: relative;
+  color: #ccc;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 0 10px;
+}
+
+.nav-link::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background-color: #ccc;
+  transition: width 0.5s ease-in-out;
+}
+
+.nav-link:hover::before {
+  width: 100%;
+}

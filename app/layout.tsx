@@ -1,6 +1,8 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import MainPageBorder from "./_components/MainPageBorder";
+import NavigationMenu from "./_components/NavigationMenu";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,7 +19,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className} dark:bg-slate-800 text-slate-200`}>
-        {children}
+        <MainPageBorder>
+          <NavigationMenu />
+          {children}
+        </MainPageBorder>
       </body>
     </html>
   );
