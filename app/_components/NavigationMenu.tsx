@@ -55,7 +55,7 @@ export default function NavigationMenu() {
                 <Link
                   key={index}
                   href={link.href}
-                  className="text-white block py-2 text-2xl hover:text-gray-300 hover:scale-105 transition-transform duration-200 ease-in-out"
+                  className="text-white pl-10 block py-2 text-2xl hover:text-gray-300 hover:scale-105 transition-transform duration-200 ease-in-out"
                 >
                   {link.label}
                 </Link>
