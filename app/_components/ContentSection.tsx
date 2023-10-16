@@ -26,10 +26,7 @@ export default function ContentSection() {
   console.log(PaEcase);
 
   return (
-    <section
-      className="bg-white py-16 podesi-visinu-contenta rounded"
-      id="projects"
-    >
+    <section className="bg-white py-16 podesi-visinu-contenta rounded">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <h2 className="text-3xl font-extrabold text-gray-900">My Projects</h2>
