@@ -47,12 +47,10 @@ export default function NavigationMenu() {
             </svg>
           </button>
           <div
-            className={`overlay ${
-              isMenuOpen ? "active" : ""
-            } transition ease-in-out duration-150`}
+            className={`overlay ${isMenuOpen ? "active" : ""}`}
             onClick={toggleMenu}
           >
-            <nav className={`nav-links  ${isMenuOpen ? "active" : ""} `}>
+            <nav className={`nav-links ${isMenuOpen ? "active" : ""}`}>
               {links.map((link, index) => (
                 <Link
                   key={index}

@@ -8,15 +8,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    opacity: 0; /* Initially hidden */
-    visibility: hidden; /* Initially hidden */
-    transition: opacity 0.3s ease, visibility 0.3s ease;
-  }
-  
-  .overlay.active {
-    opacity: 1; /* Fades in when active */
-    visibility: visible; /* Shows when active */
-    transition: ease-in-out 2s;
+    transition: width 2s ease; /* Transition for the charging effect */
   }
   
   .nav-links {
@@ -30,6 +22,4 @@
     text-decoration: none;
     font-size: 2xl;
   }
-  
-  /* Add any other styles you want for the navigation links */
   
