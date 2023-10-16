@@ -1,3 +1,30 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.charging-effect {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    color: white;
+  }
+  
+  .charging-effect::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: width 0.5s ease; /* Transition for the charging effect */
+  }
+  
+  .charging-effect:hover::before {
+    width: 100%; /* Fully charge the underline on hover */
+  }
+  
+
+  podesi-visinu-contenta {
+    height: 100vh !important;
+  }
