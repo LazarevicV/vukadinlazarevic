@@ -19,13 +19,15 @@ export default function NavigationMenu() {
   };
 
   return (
-    <header className="bg-gray-800 py-6">
+    <header className="dark:bg-gray-800 py-6">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-        <h1 className="text-3xl font-bold text-white">My Portfolio</h1>
+        <h1 className="text-3xl font-bold text-slate-800 dark:text-slate-300">
+          My Portfolio
+        </h1>
         <div className="lg:hidden">
           <button
             onClick={toggleMenu}
-            className={`text-gray-300 focus:outline-none menu-icon ${
+            className={`text-slate-700 dark:text-slate-300 focus:outline-none menu-icon ${
               isMenuOpen ? "open" : ""
             }`}
           >
@@ -50,12 +52,16 @@ export default function NavigationMenu() {
             className={`overlay ${isMenuOpen ? "active" : ""}`}
             onClick={toggleMenu}
           >
-            <nav className={`nav-links ${isMenuOpen ? "active" : ""}`}>
+            <nav
+              className={`nav-links bg-slate-200  dark:bg-gray-800  ${
+                isMenuOpen ? "active" : ""
+              }`}
+            >
               {links.map((link, index) => (
                 <Link
                   key={index}
                   href={link.href}
-                  className="text-white pl-10 block py-2 text-2xl hover:text-gray-300 nav-link"
+                  className="text-slate-800 dark:text-slate-300 pl-10 block py-2 text-2xl hover:text-slate-600 nav-link"
                 >
                   {link.label}
                 </Link>
@@ -63,12 +69,12 @@ export default function NavigationMenu() {
             </nav>
           </div>
         </div>
-        <nav className="hidden lg:flex flex-grow items-center justify-center bg-slate-800">
+        <nav className="hidden lg:flex flex-grow items-center justify-center text-black dark:bg-slate-800">
           {links.map((link, index) => (
             <Link
               key={index}
               href={link.href}
-              className="text-gray-300 px-3 py-2 rounded-md text-2xl font-medium cursor-pointer nav-link"
+              className="text-slate-800 dark:text-slate-300 px-3 py-2 rounded-md text-2xl font-medium cursor-pointer nav-link"
             >
               {link.label}
             </Link>
